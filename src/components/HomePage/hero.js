@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
+import hero from '../../images/hero.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -72,6 +73,8 @@ const imagePath = name => images(name, true)
 
         const HeroWrapper = styled.div`
         position: absolute;
+        background-image: url(${hero});
+        background-size: cover;
         top: 0;
         left: 0;
         width: 100%;
@@ -90,13 +93,6 @@ const imagePath = name => images(name, true)
             }
         `
 
-        const HeroIMG = styled.img`
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 100vh;
-        `
         const Hero = styled.div`
         width: 100%;
         min-height: 100vh;
@@ -105,6 +101,7 @@ const imagePath = name => images(name, true)
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
             
             @media only screen and (max-width: 768px) {
               padding: 10em 2em;
@@ -122,10 +119,6 @@ const themeAnimation = (dataAnimation, el) => {
       gsap.from(el,
         {y: '50%', opacity: 0, duration: '0.8', delay: '0.5', ease: 'Power4.easeInOut' }
       )
-      break;
-    case '3':
-      gsap.from(el,
-        {css:{scale: '1.2'}, opacity: 0, duration: '2', ease: 'Power2.easeOut' },)
       break;
   }
 }
@@ -148,7 +141,6 @@ const HomeHero = () => {
         <HeroSpanBig isBig className='game' data-animation='2'>BUILDERAL</HeroSpanBig>
       </H1>
       <HeroWrapper>
-        <HeroIMG src={imagePath('./hero.jpg')} className='game' data-animation='3' />
       </HeroWrapper>
     </Hero>
   )
