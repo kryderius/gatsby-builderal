@@ -3,7 +3,7 @@ import { Link } from "react-head";
 
 const Seo = () => (
   <>
-    <Link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap" rel="stylesheet" />
+    <Link href="static\fonts\fonts.css" rel="stylesheet" />
   </>
 );
 
