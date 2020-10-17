@@ -3,7 +3,7 @@ import { Link } from "react-head";
 
 const Seo = () => (
   <>
-    <Link href="static\fonts\fonts.css" rel="stylesheet" />
+    <Link href="static\fonts\fonts.css" rel="preload" />
   </>
 );
 
