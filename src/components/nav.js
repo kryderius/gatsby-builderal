@@ -13,6 +13,10 @@ const StyledNav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+      @media only screen and (max-width: 768px) {
+              padding: 0em 2em;
+            }
 `
 const StyledUl = styled.ul`
   display: flex;
